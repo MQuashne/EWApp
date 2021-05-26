@@ -1,0 +1,20 @@
+#
+# This is the server logic of a Shiny web application. You can run the
+# application by clicking 'Run App' above.
+#
+# Find out more about building applications with Shiny here:
+#
+#    http://shiny.rstudio.com/
+#
+
+library(shiny)
+
+# Define server logic required to draw a histogram
+server <- function(input, output, session) {
+observe({
+    query <- parseQueryString(session$clientData$url_search)
+    if (!is.null(query[['tap']])) {
+        updateTabsetPanel(session,"mainnav",selected=query[['tap']])
+    }
+})
+}

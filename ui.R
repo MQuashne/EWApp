@@ -10,6 +10,7 @@
 
 library(shiny)
 library(shinyMobile)
+library(shinyjs)
 
 ui <- f7Page(
   title = "Tab Layout",
@@ -41,24 +42,30 @@ ui <- f7Page(
       )
     ,
     f7Tabs(
-      id = "tabs",
+      id = "tabs",animated=FALSE,
       f7Tab(
         tabName = "Explore",
         align = "center",
         h4("Tap anywhere on the wheel to learn more about an energy type"),
         img(
-          src = 'EnergyWheel.png',
+          src = 'BGEEW Light.svg',
           usemap = '#image-map',
           height = 470,
-          width = 480
+          width = 471
         ),
         HTML(
           '
 <map name="image-map">
-<area target="_self" title="Gravity" href="?tap=gravity" coords=219,175,260,175,308,13,170,13" shape="poly">
-<area target="_self" title="Motion" href="?tap=motion" coords=260,175,308,13,438,96,293,197" shape="poly">
-<area target="_self" title="Mechanical" href="?tap=mechanical" coords=438,96,293,197,305,235,480,235" shape="poly">
-<area target="_self" title="D" href="?letter=4" coords=50,50,100,50,100,100,50,100" shape="poly">
+<area target="_self" title="Gravity" href="?tap=Gravity" coords=221,185,249,185,301,19,232,5,160,19" shape="poly">
+<area target="_self" title="Motion" href="?tap=Motion" coords=249,185,301,19,369,48,418,99,276,203" shape="poly">
+<area target="_self" title="Mechanical" href="?tap=Mechanical" coords=418,99,276,203,286,234,465,234,451,161" shape="poly">
+<area target="_self" title="Electrical" href="?tap=Electrical" coords=286,234,465,234,456,301,423,365,277,265" shape="poly">
+<area target="_self" title="Pressure" href="?tap=Pressure" coords=277,265,423,365,376,418,312,452,252,284" shape="poly">
+<area target="_self" title="Sound" href="?tap=Sound" coords=312,452,252,284,219,285,168,452,236,465" shape="poly">
+<area target="_self" title="Radiation" href="?tap=Radiation" coords=219,285,168,452,101,422,48,373,193,266" shape="poly">
+<area target="_self" title="Biological" href="?tap=Biological" coords=48,373,193,266,185,236,0,234,16,305" shape="poly">
+<area target="_self" title="Chemical" href="?tap=Chemical" coords=185,236,0,234,16,164,44,103,191,205" shape="poly">
+<area target="_self" title="Tempterature" href="?tap=Temperature" coords=44,103,191,205,217,185,160,19,100,51" shape="poly">
 </map>
               '
         )
