@@ -1,0 +1,13 @@
+name: EWApp
+title: EWApp
+username:
+account: bgeperformanceassessment
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 4162573
+bundleId: 4622641
+url: https://bgeperformanceassessment.shinyapps.io/EWApp/
+when: 1621568005.96033
+lastSyncTime: 1621568005.96033
+asMultiple: FALSE
+asStatic: FALSE
