@@ -8,19 +8,13 @@
 #
 
 library(shiny)
-library(shinyjs)
 
 # Define server logic required to draw a histogram
 server <- function(input, output, session) {
-  observe({
+observe({
     query <- parseQueryString(session$clientData$url_search)
     if (!is.null(query[['tap']])) {
-      updateF7Tabs(session,id="tabs",selected=query[['tap']])  
+        updateTabsetPanel(session,"mainnav",selected=query[['tap']])
     }
-  })
-  
-  observeEvent(input$Gravity,{updateF7Tabs(session,id="tabs",selected="Gravity")
-    shinyjs::hide("leftpanel")}
-    )
-  }
-
+})
+}
