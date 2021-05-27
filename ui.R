@@ -35,7 +35,7 @@ ui <- f7Page(
         f7Button(inputId="Sound",label="Sound",fill=FALSE),
         f7Button(inputId="Radiation",label="Radiation",fill=FALSE),
         f7Button(inputId="Biological",label="Biological",fill=FALSE),
-        f7Button(inputId="Chemical",label="Chemical",fill=FALSE),
+        f7Button(inputId="Chemical",label="Chemicall",fill=FALSE),
         f7Button(inputId="Temperature",label="Temperature",fill=FALSE)
         
         )
@@ -73,7 +73,7 @@ ui <- f7Page(
       ,
       f7Tab(
         tabName = "Gravity",
-        hidden = TRUE,
+        hidden = FALSE,
         "Gravity definition and examples/questions"
       ),
       f7Tab(
