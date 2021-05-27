@@ -12,19 +12,17 @@ library(shinyjs)
 
 # Define server logic required to draw a histogram
 server <- function(input, output, session) {
-<<<<<<< HEAD
+
 updateF7Tabs(session,id="tabs",selected="Explore")
-    observe({
-=======
+
   observe({
->>>>>>> 8d82c80ca5a2cb969cad41ac6e864eca60597e8b
     query <- parseQueryString(session$clientData$url_search)
     if (!is.null(query[['tap']])) {
       updateF7Tabs(session,id="tabs",selected=query[['tap']])  
     }
   })
   
-<<<<<<< HEAD
+
   observeEvent(input$'The Energy Wheel',{updateF7Tabs(session,id="tabs",selected="Explore")
     updateF7Panel(id="leftpanel")}
     )
@@ -58,10 +56,5 @@ updateF7Tabs(session,id="tabs",selected="Explore")
   observeEvent(input$Temperature,{updateF7Tabs(session,id="tabs",selected="Temperature")
     updateF7Panel(id="leftpanel")}
   )
-=======
-  observeEvent(input$Gravity,{updateF7Tabs(session,id="tabs",selected="Gravity")
-    shinyjs::hide("leftpanel")}
-    )
->>>>>>> 8d82c80ca5a2cb969cad41ac6e864eca60597e8b
   }
 
